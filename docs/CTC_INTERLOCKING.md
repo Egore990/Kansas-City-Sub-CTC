@@ -2,6 +2,8 @@
 
 Baseline: [overview](SYSTEM_OVERVIEW.md). Confirmed behavior below is static source behavior, not a validated railway safety case. Main reference: `CTCLogic.vb`, a single module with global mutable state. There is no separately loaded route database or relay-logic configuration file.
 
+For a non-programmer explanation, see [Signal logic in step-by-step English](SIGNAL_LOGIC_PLAIN_ENGLISH.md). It expands the route tables into numbered checks for all15 wayside signal variables, explaining the code-button process, remembered directions, time release and yardmaster permissions. This technical document retains the compact predicates and implementation detail.
+
 ## Ordered control cycle
 
 `DoOneControlCycle` (`210–274`) increments the cycle-based flash counter, reads all nodes, processes dispatcher controls, sets traffic sticks, commands turnout state, handles electric locks, computes routes east then west, applies time locking, clears traffic sticks, schedules indication codes, updates office/graphical indications, advances road-light timing, decrements timers, applies simulated signal failure and writes all nodes.

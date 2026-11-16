@@ -26,6 +26,8 @@ The current priority is **Option A: recover and behaviorally verify an isolated 
 
 Supplement: [Startup initialization and turnout position tracking](STARTUP_INITIALIZATION.md). This traces the available Run command, records the unresolved “Start Layout” name, lists defaults and distinguishes ordinary movement timing from the absence of a fresh-start settling gate.
 
+Reading guide: [Signal logic in step-by-step English](SIGNAL_LOGIC_PLAIN_ENGLISH.md) explains every implemented wayside signal, its stop/clear conditions, displayed aspects, yard permissions and cancellation behavior, with source references and explicit limits.
+
 Project update: [Historical backups and comparison plan](HISTORICAL_BACKUPS.md) records the unavailable2018 candidates and their evidence status. [Proposed Phase 2 build and simulation plan](PHASE_2_BUILD_SIMULATION_PLAN.md) defines prerequisites, approval gates and future evidence; it has not been executed.
 
 ## Evidence convention and scope
