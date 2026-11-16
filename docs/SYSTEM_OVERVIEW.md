@@ -10,7 +10,7 @@ Most of that functionality appears recoverable. A build has **not** been attempt
 
 The main engineering risks are ignored communications failures, stale/shared input and output buffers, time-based rather than measured turnout correspondence, shortened debug delays, maintenance overrides and no demonstrated stop-on-disconnect policy. These matter more than merely getting the program to launch. The software is an operational reference; it is not demonstrated failsafe interlocking.
 
-The most promising sequence is **Option A as an isolated reference baseline, then a staged Option B for maintainability**, conditional on offline validation and physical mapping. A wholesale replacement or JMRI migration remains feasible but would require reproducing considerable railway-specific behavior. No implementation is authorized by this audit. See [options](RESTORATION_OPTIONS.md) and [roadmap](RESTORATION_ROADMAP.md).
+The current priority is **Option A: recover and behaviorally verify an isolated original-application baseline**, beginning with the available GitHub source. Modernization remains a later option, not the next approved action. Reported2018 backups may change baseline selection after comparison; no historical version is yet established as the final operational release. A replacement or JMRI migration would require reproducing considerable railway-specific behavior. No implementation is authorized. See [options](RESTORATION_OPTIONS.md), [backup discovery](HISTORICAL_BACKUPS.md) and [roadmap](RESTORATION_ROADMAP.md).
 
 ## Document index
 
@@ -26,13 +26,21 @@ The most promising sequence is **Option A as an isolated reference baseline, the
 
 Supplement: [Startup initialization and turnout position tracking](STARTUP_INITIALIZATION.md). This traces the available Run command, records the unresolved “Start Layout” name, lists defaults and distinguishes ordinary movement timing from the absence of a fresh-start settling gate.
 
+Project update: [Historical backups and comparison plan](HISTORICAL_BACKUPS.md) records the unavailable2018 candidates and their evidence status. [Proposed Phase 2 build and simulation plan](PHASE_2_BUILD_SIMULATION_PLAN.md) defines prerequisites, approval gates and future evidence; it has not been executed.
+
 ## Evidence convention and scope
 
 **Confirmed** means directly present in this source snapshot or its Git metadata. **Inference** means an engineering conclusion from the implementation. **Unknown** means this repository cannot establish it. Historical/user descriptions are kept distinct from code findings. Comments and simulator labels can be stale: executable pack/unpack statements take precedence for software mapping, and none proves the installed wiring.
 
+For new backup evidence, distinguish owner-confirmed context, owner recollection, reported screenshot observations and unverified hypotheses as defined in [the evidence register](HISTORICAL_BACKUPS.md#evidence-labels). Codex has not inspected the OneDrive files or the described screenshots. Approximate2018 filenames, sizes and dates are reported observations, not file-level verification.
+
 **Authoritative owner clarification (16 November 2026; supersedes earlier assumptions):** day/night lighting was installed by the current owner after purchasing the railway and is excluded from initial software restoration. EasyDCC operates independently of C/MRI and CTC; track detectors provide occupancy information to CTC, and no DCC command integration is to be planned. The turntable is manually controlled by a physical switch at the side of the layout and requires no software integration. Some points have manual control, while others have software interlocking; which functions overlap must be established from source and wiring, not assumed. Absence of EasyDCC, turntable or day/night control code is not evidence of missing CTC software. Preserve these boundaries; new automation or integrations require explicit approval.
 
 Inspected material includes the current tracked source, form designers, resource/configuration XML, project and solution, notes, asset references, reachable commit history and relevant historical changes/deletions. Historical executables and binary IDE state were identified, not run or treated as source. No compile, application execution, automated behavioral test, dependency installation, physical communication, deployment or source edit occurred. Static checks of paths, XML, reference coverage and documentation are not application tests.
+
+## Owner-reported hardware condition
+
+The original PC was damaged by lightning. The owner also reports prolonged moisture from water beneath the floor/carpet, visibly warped timber supporting the CTC machine, separate5 V/12 V distribution and a previously replaced failed electrical unit. The affected unit and current C/MRI/electronics condition are not established; no comprehensive recent electrical testing is reported. Do not assume serviceability. Any future authorized hardware recommissioning starts with inspection, isolated supply tests and individual board testing, separately from software simulation. The owner identifies Tortoise motors but believes continuous position feedback was absent; actual contact wiring still requires verification.
 
 ## Architecture
 

@@ -8,6 +8,8 @@ The owner's authoritative clarification on 16 November 2026 supersedes earlier a
 
 ## Highest priority: preserve and identify the real baseline
 
+The owner has now located substantial original-PC backups, but they are not yet available to Codex. The immediate missing inputs are complete local paths/provenance and access to the actual files, including hidden `.git`; the existence of reported folders must not be confused with completed recovery or comparison. The [backup register](HISTORICAL_BACKUPS.md) records approximate sizes,2018 observations and read-only comparison requirements. The [Phase 2 proposal](PHASE_2_BUILD_SIMULATION_PLAN.md#information-needed-from-the-owner-before-gate-a) lists environment/operating inputs needed before any approved build or execution.
+
 | Needed evidence | Why it matters | Possible source |
 |---|---|---|
 | Damaged PC disk image, backups, installed EXE/DLL/PDB/config files and dates | HEAD is2016 development history, not authenticated last-working deployment | Disk recovery or original archives, without running the railway software |
@@ -20,6 +22,7 @@ The owner's authoritative clarification on 16 November 2026 supersedes earlier a
 ## Electrical and mechanical unknowns
 
 - Which equipment was actually struck by lightning or affected by moisture; damage extent cannot be diagnosed from source.
+- Owner reports water beneath flooring/carpet for a prolonged period and visible warping of CTC-support timber. Board/electronics condition remains unknown and comprehensive recent electrical testing has not been reported. Identify the previously replaced failed electrical unit and any repair records; no inspection or power-up is authorized here.
 - Power supply models, 5 V/12 V polarity, current limits, protection, fusing, grounding, isolation and actual common connections. A12 V comment is not a circuit design.
 - Serial interface electrical standard, converter model, isolation, adapter driver, bus topology, termination/bias and cable continuity. COM4 is a software setting, not the required identity of a future adapter.
 - SMINI revision/firmware, address-switch positions, oscillator setup, output sourcing/sinking configuration and driver boards. Confirm UA0–3 physically.
@@ -54,6 +57,8 @@ Additional startup evidence: the owner recalls a “Start Layout” command, whi
 All current Compile/EmbeddedResource paths and central file-backed resource references resolve. `Resources/TurnoutBlank1.png` is missing as a project None item. PowerPacks12 is absent from HEAD but recoverable as an older Git object; its exact suitability and permission to redistribute are not established. No build has established compiler errors, resource generation, binding behavior or Windows rendering correctness. No exact earliest framework version before the imported v4.0 project can be proven.
 
 Git history was reviewed for current architecture, relevant changes, deletion provenance and snapshot chronology. It does not include a complete pre2016 development archive. Parent-fork divergence, other branches not advertised by this remote, original removable media and any uncommitted last-working changes remain outside the audit. Additional archives should be compared read-only and recorded by hash before selecting any baseline.
+
+Reported local `.git`, `.vs`, `obj` and `bin/Debug` directories may supply missing ancestry, source/binary relationships and development-environment evidence. Their contents/completeness are unverified. JMRI folders/installers4.4 and4.12 do not prove operational integration. Later timestamps do not resolve which revision was actually deployed.
 
 ## Acceptance evidence still absent
 

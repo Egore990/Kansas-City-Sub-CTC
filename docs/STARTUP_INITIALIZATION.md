@@ -2,6 +2,8 @@
 
 Supplement to the Phase 1 audit, 16 November 2026. Baseline: commit `0a561b3f8de459a787795a16da4c987868d4ae79`; see [overview](SYSTEM_OVERVIEW.md). Static investigation only. No application execution, hardware communication or initialization/interlocking changes.
 
+**Backup update:** the owner reports2018 source and compiled application candidates that Codex has not yet received. The command names, defaults, feedback use and timing conclusions here apply to the inspected2016 GitHub baseline, not automatically to those backups or the last operational installation. The [future comparison](HISTORICAL_BACKUPS.md) must explicitly check startup routines and any changed Start Layout action. The [Phase 2 proposal](PHASE_2_BUILD_SIMULATION_PLAN.md) requires characterization before any approved behavior change.
+
 ## Identifying “Start Layout”
 
 The owner reports that operators used **Start Layout** to establish starting turnout and signal states, and believes Tortoise motors did not provide real-time position feedback. The operating recollection is recorded; the physical feedback arrangement remains unverified.

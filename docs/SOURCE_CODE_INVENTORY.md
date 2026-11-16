@@ -2,6 +2,8 @@
 
 Baseline: [overview](SYSTEM_OVERVIEW.md). Paths below are relative to the repository root. The audited baseline contains **104 tracked files**, excluding `.git` and the subsequently added audit documentation. The file-by-file appendix lists every baseline file; generated files and assets are not omitted simply because they contain no control logic.
 
+**Pending archive comparison:** the owner reports Windows7 PC backups containing source dated2016/2018, an approximately235 KB application dated23 April2018, PowerPacks material and local `.git` history. These are not included in this inventory and have not been inspected by Codex. No timestamp, binary/source match, dependency version or unpublished commit is verified. See [backup register and comparison procedure](HISTORICAL_BACKUPS.md); all completeness findings below apply only to the inspected GitHub baseline.
+
 ## Build system and dependencies
 
 | Item | Confirmed finding | Evidence |

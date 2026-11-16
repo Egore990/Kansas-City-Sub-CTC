@@ -2,6 +2,8 @@
 
 Baseline: [overview](SYSTEM_OVERVIEW.md). **The source supports exercising the actual CTC logic without a physical C/MRI connection.** This is an architectural finding; no build or simulator run was performed.
 
+The owner-requested next step is preparation, not execution. See the [unapproved Phase 2 plan](PHASE_2_BUILD_SIMULATION_PLAN.md) for isolated-environment prerequisites, build/launch approval gates, characterization scenarios and evidence requirements. Reported2018 simulator files remain unavailable and unverified; do not assume their behavior matches this source. Serial failure recovery cannot be certified with the existing checkbox backend.
+
 ## How it works
 
 `MainPanel.RunWithCMRISimulatorToolStripMenuItem_Click` (`MainPanel.vb:39–45`) selects `New TestCMRI`, calls the normal `InitializeRailroad` and control loop and sets a 10 ms timer. The live menu instead selects `New CMRI` with a100 ms timer. Both use `InterfaceCMRI` (`ICMRI.vb:1–6`).

@@ -42,10 +42,12 @@ The owner's authoritative boundaries apply to all three options: EasyDCC is stan
 
 ## Recommendation and decision gates
 
-Use **A to recover a disconnected behavioral baseline, then select a staged B** if that baseline and electrical survey support it. This follows from the amount of custom, recoverable logic and the desire to preserve the physical panel's authentic operation. It is a provisional engineering recommendation, not a commitment before results exist. C/JMRI becomes more attractive if dependency recovery fails, the current logic proves unsuitable to isolate/validate, or maintainers have stronger JMRI capability and accept its configuration/testing cost.
+The current owner direction is **A: recover and verify original behavior first**, using the available GitHub source as the immediate reference. Modernization is a longer-term possibility and is not a required next phase. Reported2018 source/binaries and local Git history must be compared before deciding whether to replace that reference; see [backup discovery](HISTORICAL_BACKUPS.md). None is yet verified as the final working version. C/JMRI remains an alternative only after evidence and explicit review support it; historical JMRI installations do not establish integration or justify a migration.
 
 Decide after answering: can a reproducible disconnected build run; does it match recovered last-operating behavior; can remaining circuit documentation be reconstructed; which maintainers can support it; what failure behavior must be corrected; and what commissioning resources are available? Do not select a replacement merely because the original PC failed, or deploy the original merely because it compiles.
 
 ## Requirements before any compile/test — approval not yet requested
+
+The concrete preparation proposal is now documented in [Phase 2 build and simulation planning](PHASE_2_BUILD_SIMULATION_PLAN.md). It is unapproved and no build or simulation has been started. The final environment-specific commands/dependencies must be presented before execution approval. Do not combine or merge historical code to make a build succeed.
 
 The next approved work package should specify the exact isolated Windows host/VM, VB/MSBuild toolchain, reference assemblies, PowerPacks source/version/license, copied working tree and intended simulator-only commands. Disconnect all physical control adapters and disable passthrough; confirm the selected backend before launch. Explain whether installing prerequisites or altering a copy is needed and obtain explicit approval before any build, test or application launch. A separate later authorization is required for electrical/physical bench operations. Phase1 has done none of these actions.
