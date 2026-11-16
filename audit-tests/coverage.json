@@ -1,0 +1,372 @@
+{
+  "status": "prepared-not-executed",
+  "total_cases": 711,
+  "executed_cases": 0,
+  "classification_counts": {
+    "characterization": 701,
+    "known-issue": 10
+  },
+  "categories": {
+    "baseline": 1,
+    "blocks": 296,
+    "io": 24,
+    "lifecycle": 29,
+    "points": 126,
+    "signals": 235
+  },
+  "devices": [
+    {
+      "category": "baseline",
+      "device": "constants",
+      "cases": 1
+    },
+    {
+      "category": "blocks",
+      "device": "1",
+      "cases": 33
+    },
+    {
+      "category": "blocks",
+      "device": "10",
+      "cases": 14
+    },
+    {
+      "category": "blocks",
+      "device": "11",
+      "cases": 3
+    },
+    {
+      "category": "blocks",
+      "device": "12",
+      "cases": 3
+    },
+    {
+      "category": "blocks",
+      "device": "13",
+      "cases": 3
+    },
+    {
+      "category": "blocks",
+      "device": "14",
+      "cases": 3
+    },
+    {
+      "category": "blocks",
+      "device": "15",
+      "cases": 1
+    },
+    {
+      "category": "blocks",
+      "device": "2",
+      "cases": 31
+    },
+    {
+      "category": "blocks",
+      "device": "3",
+      "cases": 23
+    },
+    {
+      "category": "blocks",
+      "device": "4",
+      "cases": 41
+    },
+    {
+      "category": "blocks",
+      "device": "5",
+      "cases": 25
+    },
+    {
+      "category": "blocks",
+      "device": "6",
+      "cases": 36
+    },
+    {
+      "category": "blocks",
+      "device": "7",
+      "cases": 27
+    },
+    {
+      "category": "blocks",
+      "device": "8",
+      "cases": 32
+    },
+    {
+      "category": "blocks",
+      "device": "9",
+      "cases": 21
+    },
+    {
+      "category": "io",
+      "device": "1",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "10",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "11",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "15",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "2",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "23",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "3",
+      "cases": 2
+    },
+    {
+      "category": "io",
+      "device": "4",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "5",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "6",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "7",
+      "cases": 2
+    },
+    {
+      "category": "io",
+      "device": "8",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "9",
+      "cases": 2
+    },
+    {
+      "category": "io",
+      "device": "comms",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "outputs",
+      "cases": 2
+    },
+    {
+      "category": "io",
+      "device": "panel",
+      "cases": 1
+    },
+    {
+      "category": "io",
+      "device": "power",
+      "cases": 4
+    },
+    {
+      "category": "lifecycle",
+      "device": "10",
+      "cases": 4
+    },
+    {
+      "category": "lifecycle",
+      "device": "12",
+      "cases": 3
+    },
+    {
+      "category": "lifecycle",
+      "device": "24",
+      "cases": 4
+    },
+    {
+      "category": "lifecycle",
+      "device": "26",
+      "cases": 4
+    },
+    {
+      "category": "lifecycle",
+      "device": "4",
+      "cases": 4
+    },
+    {
+      "category": "lifecycle",
+      "device": "8",
+      "cases": 4
+    },
+    {
+      "category": "lifecycle",
+      "device": "maintenance",
+      "cases": 2
+    },
+    {
+      "category": "lifecycle",
+      "device": "restart",
+      "cases": 1
+    },
+    {
+      "category": "lifecycle",
+      "device": "startup",
+      "cases": 2
+    },
+    {
+      "category": "lifecycle",
+      "device": "yard",
+      "cases": 1
+    },
+    {
+      "category": "points",
+      "device": "1",
+      "cases": 8
+    },
+    {
+      "category": "points",
+      "device": "11",
+      "cases": 12
+    },
+    {
+      "category": "points",
+      "device": "15",
+      "cases": 11
+    },
+    {
+      "category": "points",
+      "device": "17",
+      "cases": 7
+    },
+    {
+      "category": "points",
+      "device": "19",
+      "cases": 8
+    },
+    {
+      "category": "points",
+      "device": "23",
+      "cases": 14
+    },
+    {
+      "category": "points",
+      "device": "25",
+      "cases": 11
+    },
+    {
+      "category": "points",
+      "device": "3",
+      "cases": 12
+    },
+    {
+      "category": "points",
+      "device": "7",
+      "cases": 11
+    },
+    {
+      "category": "points",
+      "device": "9",
+      "cases": 13
+    },
+    {
+      "category": "points",
+      "device": "office-lamps",
+      "cases": 19
+    },
+    {
+      "category": "signals",
+      "device": "10LAB",
+      "cases": 16
+    },
+    {
+      "category": "signals",
+      "device": "10RABC",
+      "cases": 25
+    },
+    {
+      "category": "signals",
+      "device": "12RA",
+      "cases": 9
+    },
+    {
+      "category": "signals",
+      "device": "24LA",
+      "cases": 7
+    },
+    {
+      "category": "signals",
+      "device": "24RAB",
+      "cases": 12
+    },
+    {
+      "category": "signals",
+      "device": "26LAB",
+      "cases": 16
+    },
+    {
+      "category": "signals",
+      "device": "26LC",
+      "cases": 14
+    },
+    {
+      "category": "signals",
+      "device": "26RAB",
+      "cases": 20
+    },
+    {
+      "category": "signals",
+      "device": "4LAB",
+      "cases": 10
+    },
+    {
+      "category": "signals",
+      "device": "4RA",
+      "cases": 8
+    },
+    {
+      "category": "signals",
+      "device": "4RB",
+      "cases": 8
+    },
+    {
+      "category": "signals",
+      "device": "8LABC",
+      "cases": 28
+    },
+    {
+      "category": "signals",
+      "device": "8LD",
+      "cases": 34
+    },
+    {
+      "category": "signals",
+      "device": "8RAB",
+      "cases": 18
+    },
+    {
+      "category": "signals",
+      "device": "8RC",
+      "cases": 10
+    }
+  ],
+  "excluded": [
+    "physical hardware",
+    "real CMRI serial driver",
+    "original WinForms rendering/menus",
+    "wall-clock accuracy",
+    "2018 backups",
+    "exhaustive state-space proof"
+  ]
+}

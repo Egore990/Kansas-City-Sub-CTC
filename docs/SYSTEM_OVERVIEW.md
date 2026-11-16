@@ -32,6 +32,8 @@ Companion guides: [Points and locks in step-by-step English](POINT_LOGIC_PLAIN_E
 
 Project update: [Historical backups and comparison plan](HISTORICAL_BACKUPS.md) records the unavailable2018 candidates and their evidence status. [Proposed Phase 2 build and simulation plan](PHASE_2_BUILD_SIMULATION_PLAN.md) defines prerequisites, approval gates and future evidence; it has not been executed.
 
+Test preparation: [Automated simulation case proposal](AUTOMATED_SIMULATION_TESTS.md) describes a separate component host and 711 authored cases using the unchanged control logic and memory-only I/O. Compilation and test execution still require approval. These are prepared assertions, not reported passing results or a full GUI/serial test suite.
+
 ## Evidence convention and scope
 
 **Confirmed** means directly present in this source snapshot or its Git metadata. **Inference** means an engineering conclusion from the implementation. **Unknown** means this repository cannot establish it. Historical/user descriptions are kept distinct from code findings. Comments and simulator labels can be stale: executable pack/unpack statements take precedence for software mapping, and none proves the installed wiring.

@@ -1,0 +1,2774 @@
+{
+  "schema": 1,
+  "baseline": "0a561b3f8de459a787795a16da4c987868d4ae79",
+  "status": "authored-not-executed",
+  "constants": {
+    "CLR": 0,
+    "OCC": 1,
+    "RTD": 2,
+    "TUN": 1,
+    "TUR": 2,
+    "DRK": 0,
+    "GRN": 1,
+    "YEL": 3,
+    "RED": 2,
+    "GRNRED": 6,
+    "REDGRN": 9,
+    "YELRED": 14,
+    "REDYEL": 11,
+    "REDRED": 10,
+    "REDREDRED": 42,
+    "REDREDYEL": 43,
+    "REDYELRED": 46,
+    "YELREDRED": 58,
+    "GRNREDRED": 26,
+    "REDGRNRED": 38,
+    "REDREDGRN": 41,
+    "PP": 1,
+    "LNOR": 1,
+    "LREV": 2,
+    "LOCKED": 0,
+    "UNLOCKED": 1,
+    "MOTOR": 0,
+    "HAND": 1,
+    "RIGHT": 1,
+    "LEFT": 2,
+    "LSTOP": 0,
+    "NV": 0,
+    "LTOFF": 0,
+    "LTON": 1,
+    "DARKLT": 0,
+    "NORLT": 1,
+    "REVLT": 2,
+    "RIGHTLT": 1,
+    "STOPLT": 2,
+    "LEFTLT": 4,
+    "EAST": 2,
+    "WEST": 1,
+    "NDT": 0,
+    "TMROFF": -1,
+    "TrainClear": 0,
+    "TrainWaiting": 1,
+    "YardAccept": 2,
+    "TrainInBlock": 3,
+    "CCDL": 2,
+    "ICDL": 2,
+    "SMDL": 10,
+    "RTDL": 10,
+    "LKDL": 10
+  },
+  "routes": [
+    {
+      "device": "4LAB",
+      "variant": "normal",
+      "field": "SIG4LAB",
+      "expected": "GRNRED",
+      "setup": {
+        "SGL4R": "@LEFT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL4R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK9": "@OCC"
+          }
+        ],
+        [
+          "point-3-transition",
+          {
+            "SWL3LT": "@DARKLT"
+          }
+        ],
+        [
+          "opposing",
+          {
+            "FS9": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "4LAB",
+      "variant": "reverse",
+      "field": "SIG4LAB",
+      "expected": "REDGRN",
+      "setup": {
+        "SGL4R": "@LEFT",
+        "SWL3LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL4R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK9": "@OCC"
+          }
+        ],
+        [
+          "point-3-transition",
+          {
+            "SWL3LT": "@DARKLT"
+          }
+        ],
+        [
+          "opposing",
+          {
+            "FS9": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "4RA",
+      "variant": "normal",
+      "field": "SIG4RA",
+      "expected": "GRN",
+      "setup": {
+        "SGL4R": "@RIGHT",
+        "TrainID[14]": "text:T14"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL4R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK9": "@OCC"
+          }
+        ],
+        [
+          "point-3-transition",
+          {
+            "SWL3LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV4": "@LEFT"
+          }
+        ],
+        [
+          "junction",
+          {
+            "TLV8": "@LEFT",
+            "SWL7LT": "@REVLT",
+            "SWL9LT": "@NORLT"
+          }
+        ],
+        [
+          "identity",
+          {
+            "TrainID[14]": "text:"
+          }
+        ],
+        [
+          "wrong-route",
+          {
+            "SWL3LT": "@REVLT"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "4RB",
+      "variant": "reverse",
+      "field": "SIG4RB",
+      "expected": "GRN",
+      "setup": {
+        "SGL4R": "@RIGHT",
+        "SWL3LT": "@REVLT",
+        "TrainID[13]": "text:T13"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL4R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK9": "@OCC"
+          }
+        ],
+        [
+          "point-3-transition",
+          {
+            "SWL3LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV4": "@LEFT"
+          }
+        ],
+        [
+          "junction",
+          {
+            "TLV8": "@LEFT",
+            "SWL7LT": "@REVLT",
+            "SWL9LT": "@NORLT"
+          }
+        ],
+        [
+          "identity",
+          {
+            "TrainID[13]": "text:"
+          }
+        ],
+        [
+          "wrong-route",
+          {
+            "SWL3LT": "@NORLT"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8LABC",
+      "variant": "normal",
+      "field": "SIG8LABC",
+      "expected": "GRNREDRED",
+      "setup": {
+        "SGL8R": "@LEFT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@RIGHT"
+          }
+        ],
+        [
+          "branch15",
+          {
+            "SWL15LT": "@REVLT"
+          }
+        ],
+        [
+          "traffic5",
+          {
+            "FS5": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8LABC",
+      "variant": "crossover9",
+      "field": "SIG8LABC",
+      "expected": "REDGRNRED",
+      "setup": {
+        "SGL8R": "@LEFT",
+        "SWL9LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@RIGHT"
+          }
+        ],
+        [
+          "branch15",
+          {
+            "SWL15LT": "@REVLT"
+          }
+        ],
+        [
+          "occupied8",
+          {
+            "BK8": "@OCC"
+          }
+        ],
+        [
+          "traffic6",
+          {
+            "FS6": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8LABC",
+      "variant": "branch7",
+      "field": "SIG8LABC",
+      "expected": "REDREDGRN",
+      "setup": {
+        "SGL8R": "@LEFT",
+        "SWL7LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@RIGHT"
+          }
+        ],
+        [
+          "branch15",
+          {
+            "SWL15LT": "@REVLT"
+          }
+        ],
+        [
+          "traffic9",
+          {
+            "FS9": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8LD",
+      "variant": "normal9",
+      "field": "SIG8LD",
+      "expected": "GRN",
+      "setup": {
+        "SGL8R": "@LEFT",
+        "SWL15LT": "@REVLT",
+        "TrainID[10]": "text:T10"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@RIGHT"
+          }
+        ],
+        [
+          "wrong15",
+          {
+            "SWL15LT": "@NORLT"
+          }
+        ],
+        [
+          "lock17",
+          {
+            "CLL17LT": "@REVLT"
+          }
+        ],
+        [
+          "identity",
+          {
+            "TrainID[10]": "text:"
+          }
+        ],
+        [
+          "traffic5",
+          {
+            "FS5": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8LD",
+      "variant": "reverse9",
+      "field": "SIG8LD",
+      "expected": "GRN",
+      "setup": {
+        "SGL8R": "@LEFT",
+        "SWL15LT": "@REVLT",
+        "TrainID[10]": "text:T10",
+        "SWL9LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@RIGHT"
+          }
+        ],
+        [
+          "wrong15",
+          {
+            "SWL15LT": "@NORLT"
+          }
+        ],
+        [
+          "lock17",
+          {
+            "CLL17LT": "@REVLT"
+          }
+        ],
+        [
+          "identity",
+          {
+            "TrainID[10]": "text:"
+          }
+        ],
+        [
+          "traffic6",
+          {
+            "FS6": "@WEST"
+          }
+        ],
+        [
+          "occupied8",
+          {
+            "BK8": "@OCC"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8LD",
+      "variant": "reverse7",
+      "field": "SIG8LD",
+      "expected": "GRN",
+      "setup": {
+        "SGL8R": "@LEFT",
+        "SWL15LT": "@REVLT",
+        "TrainID[10]": "text:T10",
+        "SWL7LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@RIGHT"
+          }
+        ],
+        [
+          "wrong15",
+          {
+            "SWL15LT": "@NORLT"
+          }
+        ],
+        [
+          "lock17",
+          {
+            "CLL17LT": "@REVLT"
+          }
+        ],
+        [
+          "identity",
+          {
+            "TrainID[10]": "text:"
+          }
+        ],
+        [
+          "traffic9",
+          {
+            "FS9": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8RAB",
+      "variant": "normal",
+      "field": "SIG8RAB",
+      "expected": "GRNRED",
+      "setup": {
+        "SGL8R": "@RIGHT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@LEFT"
+          }
+        ],
+        [
+          "wrong9",
+          {
+            "SWL9LT": "@REVLT"
+          }
+        ],
+        [
+          "traffic1",
+          {
+            "FS1": "@EAST"
+          }
+        ],
+        [
+          "selected-c",
+          {
+            "SWL7LT": "@REVLT"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8RAB",
+      "variant": "branch15",
+      "field": "SIG8RAB",
+      "expected": "REDGRN",
+      "setup": {
+        "SGL8R": "@RIGHT",
+        "SWL15LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@LEFT"
+          }
+        ],
+        [
+          "wrong9",
+          {
+            "SWL9LT": "@REVLT"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "8RC",
+      "variant": "branch7",
+      "field": "SIG8RC",
+      "expected": "GRN",
+      "setup": {
+        "SGL8R": "@RIGHT",
+        "SWL7LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL8R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK7": "@OCC"
+          }
+        ],
+        [
+          "point-7-transition",
+          {
+            "SWL7LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV8": "@LEFT"
+          }
+        ],
+        [
+          "wrong9",
+          {
+            "SWL9LT": "@REVLT"
+          }
+        ],
+        [
+          "traffic1",
+          {
+            "FS1": "@EAST"
+          }
+        ],
+        [
+          "selected-ab",
+          {
+            "SWL7LT": "@NORLT"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "10LAB",
+      "variant": "normal",
+      "field": "SIG10LAB",
+      "expected": "GRNRED",
+      "setup": {
+        "SGL10R": "@LEFT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL10R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK8": "@OCC"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-11-transition",
+          {
+            "SWL11LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV10": "@RIGHT"
+          }
+        ],
+        [
+          "opposing",
+          {
+            "FS6": "@WEST"
+          }
+        ],
+        [
+          "wrong9",
+          {
+            "SWL9LT": "@REVLT"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "10LAB",
+      "variant": "yard",
+      "field": "SIG10LAB",
+      "expected": "REDGRN",
+      "setup": {
+        "SGL10R": "@LEFT",
+        "SWL11LT": "@REVLT",
+        "CWSTATUS": "@YardAccept"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL10R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK8": "@OCC"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-11-transition",
+          {
+            "SWL11LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV10": "@RIGHT"
+          }
+        ],
+        [
+          "opposing",
+          {
+            "FS6": "@WEST"
+          }
+        ],
+        [
+          "not-accepted",
+          {
+            "CWSTATUS": "@TrainWaiting"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "10RABC",
+      "variant": "normal",
+      "field": "SIG10RABC",
+      "expected": "GRNREDRED",
+      "setup": {
+        "SGL10R": "@RIGHT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL10R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK8": "@OCC"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-11-transition",
+          {
+            "SWL11LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "wrong11",
+          {
+            "SWL11LT": "@REVLT"
+          }
+        ],
+        [
+          "time10",
+          {
+            "TLV10": "@LEFT"
+          }
+        ],
+        [
+          "traffic2",
+          {
+            "FS2": "@EAST"
+          }
+        ],
+        [
+          "lock19",
+          {
+            "CLL19LT": "@REVLT"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "10RABC",
+      "variant": "crossover",
+      "field": "SIG10RABC",
+      "expected": "REDGRNRED",
+      "setup": {
+        "SGL10R": "@RIGHT",
+        "SWL9LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL10R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK8": "@OCC"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-11-transition",
+          {
+            "SWL11LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time8",
+          {
+            "TLV8": "@LEFT"
+          }
+        ],
+        [
+          "traffic1",
+          {
+            "FS1": "@EAST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "10RABC",
+      "variant": "branch15",
+      "field": "SIG10RABC",
+      "expected": "REDREDGRN",
+      "setup": {
+        "SGL10R": "@RIGHT",
+        "SWL9LT": "@REVLT",
+        "SWL15LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL10R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK8": "@OCC"
+          }
+        ],
+        [
+          "point-9-transition",
+          {
+            "SWL9LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-11-transition",
+          {
+            "SWL11LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-15-transition",
+          {
+            "SWL15LT": "@DARKLT"
+          }
+        ],
+        [
+          "time8",
+          {
+            "TLV8": "@LEFT"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "12RA",
+      "variant": "yard",
+      "field": "SIG12RA",
+      "expected": "GRN",
+      "setup": {
+        "SGL12R": "@RIGHT",
+        "SWL11LT": "@REVLT",
+        "TrainID[11]": "text:T11"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL12R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK8": "@OCC"
+          }
+        ],
+        [
+          "point-11-transition",
+          {
+            "SWL11LT": "@DARKLT"
+          }
+        ],
+        [
+          "wrong11",
+          {
+            "SWL11LT": "@NORLT"
+          }
+        ],
+        [
+          "time10",
+          {
+            "TLV10": "@LEFT"
+          }
+        ],
+        [
+          "traffic2",
+          {
+            "FS2": "@EAST"
+          }
+        ],
+        [
+          "lock19",
+          {
+            "CLL19LT": "@REVLT"
+          }
+        ],
+        [
+          "identity",
+          {
+            "TrainID[11]": "text:"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "24LA",
+      "variant": "normal",
+      "field": "SIG24LA",
+      "expected": "GRN",
+      "setup": {
+        "SGL24R": "@LEFT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL24R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK3": "@OCC"
+          }
+        ],
+        [
+          "point-23-transition",
+          {
+            "SWL23LT": "@DARKLT"
+          }
+        ],
+        [
+          "wrong23",
+          {
+            "SWL23LT": "@REVLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV24": "@RIGHT"
+          }
+        ],
+        [
+          "traffic1",
+          {
+            "FS1": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "24RAB",
+      "variant": "normal",
+      "field": "SIG24RAB",
+      "expected": "GRNRED",
+      "setup": {
+        "SGL24R": "@RIGHT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL24R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK3": "@OCC"
+          }
+        ],
+        [
+          "point-23-transition",
+          {
+            "SWL23LT": "@DARKLT"
+          }
+        ],
+        [
+          "time24",
+          {
+            "TLV24": "@LEFT"
+          }
+        ],
+        [
+          "traffic5",
+          {
+            "FS5": "@EAST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "24RAB",
+      "variant": "crossover",
+      "field": "SIG24RAB",
+      "expected": "REDGRN",
+      "setup": {
+        "SGL24R": "@RIGHT",
+        "SWL23LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL24R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK3": "@OCC"
+          }
+        ],
+        [
+          "point-23-transition",
+          {
+            "SWL23LT": "@DARKLT"
+          }
+        ],
+        [
+          "time26-normal25",
+          {
+            "TLV26": "@LEFT",
+            "SWL25LT": "@NORLT"
+          }
+        ],
+        [
+          "traffic6",
+          {
+            "FS6": "@EAST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "26LAB",
+      "variant": "normal",
+      "field": "SIG26LAB",
+      "expected": "GRNRED",
+      "setup": {
+        "SGL26R": "@LEFT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL26R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK4": "@OCC"
+          }
+        ],
+        [
+          "point-23-transition",
+          {
+            "SWL23LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-25-transition",
+          {
+            "SWL25LT": "@DARKLT"
+          }
+        ],
+        [
+          "wrong25",
+          {
+            "SWL25LT": "@REVLT"
+          }
+        ],
+        [
+          "time26",
+          {
+            "TLV26": "@RIGHT"
+          }
+        ],
+        [
+          "traffic2",
+          {
+            "FS2": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "26LAB",
+      "variant": "crossover",
+      "field": "SIG26LAB",
+      "expected": "REDGRN",
+      "setup": {
+        "SGL26R": "@LEFT",
+        "SWL23LT": "@REVLT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL26R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK4": "@OCC"
+          }
+        ],
+        [
+          "point-23-transition",
+          {
+            "SWL23LT": "@DARKLT"
+          }
+        ],
+        [
+          "point-25-transition",
+          {
+            "SWL25LT": "@DARKLT"
+          }
+        ],
+        [
+          "wrong25",
+          {
+            "SWL25LT": "@REVLT"
+          }
+        ],
+        [
+          "time24",
+          {
+            "TLV24": "@RIGHT"
+          }
+        ],
+        [
+          "traffic1",
+          {
+            "FS1": "@WEST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "26LC",
+      "variant": "green",
+      "field": "SIG26LC",
+      "expected": "GRN",
+      "setup": {
+        "SGL26R": "@LEFT",
+        "SWL25LT": "@REVLT",
+        "TrainID[12]": "text:T12"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL26R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK4": "@OCC"
+          }
+        ],
+        [
+          "point-25-transition",
+          {
+            "SWL25LT": "@DARKLT"
+          }
+        ],
+        [
+          "wrong25",
+          {
+            "SWL25LT": "@NORLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV26": "@RIGHT"
+          }
+        ],
+        [
+          "identity",
+          {
+            "TrainID[12]": "text:"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "26LC",
+      "variant": "yellow",
+      "field": "SIG26LC",
+      "expected": "YEL",
+      "setup": {
+        "SGL26R": "@LEFT",
+        "SWL25LT": "@REVLT",
+        "TrainID[12]": "text:T12",
+        "BK2": "@OCC"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL26R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK4": "@OCC"
+          }
+        ],
+        [
+          "point-25-transition",
+          {
+            "SWL25LT": "@DARKLT"
+          }
+        ],
+        [
+          "wrong25",
+          {
+            "SWL25LT": "@NORLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV26": "@RIGHT"
+          }
+        ],
+        [
+          "identity",
+          {
+            "TrainID[12]": "text:"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "26RAB",
+      "variant": "normal",
+      "field": "SIG26RAB",
+      "expected": "GRNRED",
+      "setup": {
+        "SGL26R": "@RIGHT"
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL26R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK4": "@OCC"
+          }
+        ],
+        [
+          "point-25-transition",
+          {
+            "SWL25LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV26": "@LEFT"
+          }
+        ],
+        [
+          "traffic6",
+          {
+            "FS6": "@EAST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "26RAB",
+      "variant": "yard",
+      "field": "SIG26RAB",
+      "expected": "REDGRN",
+      "setup": {
+        "SGL26R": "@RIGHT",
+        "SWL25LT": "@REVLT",
+        "SWI25": 1
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL26R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK4": "@OCC"
+          }
+        ],
+        [
+          "point-25-transition",
+          {
+            "SWL25LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV26": "@LEFT"
+          }
+        ],
+        [
+          "permission",
+          {
+            "SWI25": 0
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "26RAB",
+      "variant": "reverse23-normal25",
+      "field": "SIG26RAB",
+      "expected": "REDGRN",
+      "setup": {
+        "SGL26R": "@RIGHT",
+        "SWL23LT": "@REVLT",
+        "SWI25": 1
+      },
+      "guards": [
+        [
+          "request-stop",
+          {
+            "SGL26R": "@LSTOP"
+          }
+        ],
+        [
+          "occupied",
+          {
+            "BK4": "@OCC"
+          }
+        ],
+        [
+          "point-25-transition",
+          {
+            "SWL25LT": "@DARKLT"
+          }
+        ],
+        [
+          "time",
+          {
+            "TLV26": "@LEFT"
+          }
+        ],
+        [
+          "permission",
+          {
+            "SWI25": 0
+          }
+        ],
+        [
+          "traffic6",
+          {
+            "FS6": "@EAST"
+          }
+        ]
+      ],
+      "classification": "characterization"
+    },
+    {
+      "device": "26RAB",
+      "variant": "unproved23",
+      "field": "SIG26RAB",
+      "expected": "REDGRN",
+      "setup": {
+        "SGL26R": "@RIGHT",
+        "SWL23LT": 0,
+        "SWI25": 1
+      },
+      "guards": [],
+      "classification": "known-issue"
+    }
+  ],
+  "points": {
+    "1": [
+      2,
+      null,
+      3,
+      [],
+      2,
+      1,
+      0
+    ],
+    "3": [
+      4,
+      9,
+      4,
+      [
+        4
+      ],
+      2,
+      1,
+      2
+    ],
+    "7": [
+      8,
+      7,
+      5,
+      [
+        8
+      ],
+      2,
+      1,
+      4
+    ],
+    "9": [
+      10,
+      8,
+      6,
+      [
+        10,
+        8
+      ],
+      2,
+      1,
+      6
+    ],
+    "11": [
+      12,
+      8,
+      7,
+      [
+        10,
+        12
+      ],
+      2,
+      2,
+      0
+    ],
+    "15": [
+      16,
+      7,
+      8,
+      [
+        8
+      ],
+      2,
+      2,
+      2
+    ],
+    "23": [
+      24,
+      3,
+      9,
+      [
+        24,
+        26
+      ],
+      3,
+      1,
+      0
+    ],
+    "25": [
+      26,
+      4,
+      10,
+      [
+        26
+      ],
+      3,
+      1,
+      2
+    ]
+  },
+  "direction_assignments": {
+    "1": [
+      [
+        "east24",
+        "EAST",
+        {
+          "TLV24": "@LEFT"
+        }
+      ],
+      [
+        "east26",
+        "EAST",
+        {
+          "TLV26": "@LEFT",
+          "SWL23LTK": "@LREV"
+        }
+      ],
+      [
+        "west8",
+        "WEST",
+        {
+          "TLV8": "@RIGHT"
+        }
+      ],
+      [
+        "west10",
+        "WEST",
+        {
+          "TLV10": "@RIGHT",
+          "SWL9LTK": "@LREV"
+        }
+      ]
+    ],
+    "2": [
+      [
+        "east-normal",
+        "EAST",
+        {
+          "TLV26": "@LEFT"
+        }
+      ],
+      [
+        "east-yard",
+        "EAST",
+        {
+          "TLV26": "@LEFT",
+          "SWL25LTK": "@LREV"
+        }
+      ],
+      [
+        "west-aspect10",
+        "WEST",
+        {
+          "SIG10RABC": "@GRNREDRED"
+        }
+      ],
+      [
+        "west-aspect12",
+        "WEST",
+        {
+          "SIG12RA": "@GRN",
+          "SWL11LTK": "@LREV"
+        }
+      ],
+      [
+        "west-tlv10",
+        "WEST",
+        {
+          "TLV10": "@RIGHT"
+        }
+      ],
+      [
+        "west-tlv12",
+        "WEST",
+        {
+          "TLV12": "@RIGHT"
+        }
+      ]
+    ],
+    "3": [
+      [
+        "east24",
+        "EAST",
+        {
+          "SIG24LA": "@GRN"
+        }
+      ],
+      [
+        "east26",
+        "EAST",
+        {
+          "SIG26LAB": "@REDGRN",
+          "SWL23LTK": "@LREV"
+        }
+      ],
+      [
+        "west24",
+        "WEST",
+        {
+          "SIG24RAB": "@GRNRED"
+        }
+      ]
+    ],
+    "4": [
+      [
+        "east-main",
+        "EAST",
+        {
+          "SIG26LAB": "@GRNRED"
+        }
+      ],
+      [
+        "east-yard",
+        "EAST",
+        {
+          "SIG26LC": "@GRN",
+          "SWL25LTK": "@LREV"
+        }
+      ],
+      [
+        "west26",
+        "WEST",
+        {
+          "SIG26RAB": "@GRNRED"
+        }
+      ],
+      [
+        "west24",
+        "WEST",
+        {
+          "SIG24RAB": "@REDGRN",
+          "SWL23LTK": "@LREV"
+        }
+      ]
+    ],
+    "5": [
+      [
+        "east-main",
+        "EAST",
+        {
+          "SIG8LABC": "@GRNREDRED"
+        }
+      ],
+      [
+        "east-branch",
+        "EAST",
+        {
+          "SIG8LD": "@GRN",
+          "SWL15LTK": "@LREV"
+        }
+      ],
+      [
+        "west",
+        "WEST",
+        {
+          "SIG24RAB": "@GRNRED"
+        }
+      ]
+    ],
+    "6": [
+      [
+        "east10",
+        "EAST",
+        {
+          "SIG10LAB": "@GRNRED"
+        }
+      ],
+      [
+        "east8abc",
+        "EAST",
+        {
+          "SIG8LABC": "@REDGRNRED",
+          "SWL9LTK": "@LREV"
+        }
+      ],
+      [
+        "east8d",
+        "EAST",
+        {
+          "SIG8LD": "@GRN",
+          "SWL9LTK": "@LREV",
+          "SWL15LTK": "@LREV"
+        }
+      ],
+      [
+        "west26",
+        "WEST",
+        {
+          "SIG26RAB": "@GRNRED"
+        }
+      ],
+      [
+        "west24",
+        "WEST",
+        {
+          "SIG24RAB": "@REDGRN",
+          "SWL23LTK": "@LREV"
+        }
+      ]
+    ],
+    "7": [
+      [
+        "east8",
+        "EAST",
+        {
+          "TLV8": "@LEFT"
+        }
+      ],
+      [
+        "west8",
+        "WEST",
+        {
+          "TLV8": "@RIGHT"
+        }
+      ],
+      [
+        "west10",
+        "WEST",
+        {
+          "TLV10": "@RIGHT",
+          "SWL9LTK": "@LREV"
+        }
+      ]
+    ],
+    "8": [
+      [
+        "east10",
+        "EAST",
+        {
+          "TLV10": "@LEFT"
+        }
+      ],
+      [
+        "east8",
+        "EAST",
+        {
+          "TLV8": "@LEFT",
+          "SWL9LTK": "@LREV"
+        }
+      ],
+      [
+        "west10",
+        "WEST",
+        {
+          "TLV10": "@RIGHT"
+        }
+      ],
+      [
+        "west12",
+        "WEST",
+        {
+          "TLV12": "@RIGHT"
+        }
+      ]
+    ],
+    "9": [
+      [
+        "west",
+        "WEST",
+        {
+          "TLV4": "@RIGHT"
+        }
+      ],
+      [
+        "east",
+        "EAST",
+        {
+          "TLV4": "@LEFT"
+        }
+      ]
+    ],
+    "10": [
+      [
+        "west",
+        "WEST",
+        {
+          "TLV8": "@RIGHT",
+          "SWL15LTK": "@LREV"
+        }
+      ],
+      [
+        "east",
+        "EAST",
+        {
+          "TrainID[10]": "text:T10"
+        }
+      ]
+    ]
+  },
+  "direction_releases": [
+    {
+      "block": 1,
+      "label": "east-normal",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV24": "@LEFT",
+        "BK1": 1,
+        "BK3": 1
+      }
+    },
+    {
+      "block": 1,
+      "label": "east-reverse",
+      "direction": "EAST",
+      "setup": {
+        "SWL23LT": 2
+      },
+      "blockers": {
+        "TLV26": "@LEFT",
+        "BK1": 1,
+        "BK3": 1,
+        "BK4": 1
+      }
+    },
+    {
+      "block": 1,
+      "label": "west-normal",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV8": "@RIGHT",
+        "BK7": 1,
+        "BK1": 1
+      }
+    },
+    {
+      "block": 1,
+      "label": "west-branch15",
+      "direction": "WEST",
+      "setup": {
+        "SWL15LTK": 2
+      },
+      "blockers": {
+        "BK1": 1
+      }
+    },
+    {
+      "block": 1,
+      "label": "west-cross9",
+      "direction": "WEST",
+      "setup": {
+        "SWL9LT": 2
+      },
+      "blockers": {
+        "TLV10": "@RIGHT",
+        "BK8": 1,
+        "BK7": 1,
+        "BK1": 1
+      }
+    },
+    {
+      "block": 2,
+      "label": "east-reverse23",
+      "direction": "EAST",
+      "setup": {
+        "SWL23LTK": 2
+      },
+      "blockers": {
+        "BK2": 1,
+        "BK4": 1
+      }
+    },
+    {
+      "block": 2,
+      "label": "east-normal23",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV26": "@LEFT",
+        "BK2": 1,
+        "BK4": 1
+      }
+    },
+    {
+      "block": 2,
+      "label": "west-normal9",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "BK2": 1,
+        "BK8": 1,
+        "TLV10": "@RIGHT",
+        "TLV12": "@RIGHT"
+      }
+    },
+    {
+      "block": 2,
+      "label": "west-reverse9",
+      "direction": "WEST",
+      "setup": {
+        "SWL9LTK": 2
+      },
+      "blockers": {
+        "BK2": 1
+      }
+    },
+    {
+      "block": 3,
+      "label": "east-normal",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV24": "@LEFT",
+        "BK3": 1
+      }
+    },
+    {
+      "block": 3,
+      "label": "east-reverse",
+      "direction": "EAST",
+      "setup": {
+        "SWL23LTK": 2
+      },
+      "blockers": {
+        "TLV26": "@LEFT",
+        "BK3": 1,
+        "BK4": 1
+      }
+    },
+    {
+      "block": 3,
+      "label": "west",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV24": "@RIGHT",
+        "BK3": 1
+      }
+    },
+    {
+      "block": 4,
+      "label": "east-normal",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV26": "@LEFT",
+        "BK4": 1
+      }
+    },
+    {
+      "block": 4,
+      "label": "east-reverse",
+      "direction": "EAST",
+      "setup": {
+        "SWL23LTK": 2
+      },
+      "blockers": {
+        "TLV26": "@LEFT",
+        "BK3": 1,
+        "BK4": 1
+      }
+    },
+    {
+      "block": 4,
+      "label": "west-nn",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV26": "@RIGHT",
+        "BK4": 1
+      }
+    },
+    {
+      "block": 4,
+      "label": "west-nr",
+      "direction": "WEST",
+      "setup": {
+        "SWL25LTK": 2
+      },
+      "blockers": {
+        "TLV26": "@RIGHT",
+        "BK4": 1
+      }
+    },
+    {
+      "block": 4,
+      "label": "west-rn",
+      "direction": "WEST",
+      "setup": {
+        "SWL23LTK": 2
+      },
+      "blockers": {
+        "TLV24": "@RIGHT",
+        "BK3": 1,
+        "BK4": 1
+      }
+    },
+    {
+      "block": 4,
+      "label": "west-rr",
+      "direction": "WEST",
+      "setup": {
+        "SWL23LTK": 2,
+        "SWL25LTK": 2
+      },
+      "blockers": {
+        "TLV24": "@RIGHT",
+        "TLV26": "@RIGHT",
+        "BK3": 1,
+        "BK4": 1
+      }
+    },
+    {
+      "block": 5,
+      "label": "east-normal",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV8": "@LEFT",
+        "BK7": 1,
+        "BK5": 1
+      }
+    },
+    {
+      "block": 5,
+      "label": "east-reverse9",
+      "direction": "EAST",
+      "setup": {
+        "SWL9LTK": 2
+      },
+      "blockers": {
+        "BK5": 1
+      }
+    },
+    {
+      "block": 5,
+      "label": "east-reverse7",
+      "direction": "EAST",
+      "setup": {
+        "SWL7LTK": 2
+      },
+      "blockers": {
+        "BK5": 1
+      }
+    },
+    {
+      "block": 5,
+      "label": "west-normal",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV24": "@RIGHT",
+        "BK3": 1,
+        "BK5": 1
+      }
+    },
+    {
+      "block": 5,
+      "label": "west-reverse",
+      "direction": "WEST",
+      "setup": {
+        "SWL23LTK": 2
+      },
+      "blockers": {
+        "BK5": 1
+      }
+    },
+    {
+      "block": 6,
+      "label": "east-normal",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV10": "@LEFT",
+        "BK8": 1,
+        "BK6": 1
+      }
+    },
+    {
+      "block": 6,
+      "label": "east-reverse9",
+      "direction": "EAST",
+      "setup": {
+        "SWL9LTK": 2
+      },
+      "blockers": {
+        "TLV8": "@LEFT",
+        "BK7": 1,
+        "BK8": 1,
+        "BK6": 1
+      }
+    },
+    {
+      "block": 6,
+      "label": "east-reverse11",
+      "direction": "EAST",
+      "setup": {
+        "SWL11LTK": 2,
+        "TLV10": "@LEFT"
+      },
+      "blockers": {
+        "BK6": 1,
+        "BK8": 1
+      }
+    },
+    {
+      "block": 6,
+      "label": "west-normal",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV26": "@RIGHT",
+        "BK4": 1,
+        "BK6": 1
+      }
+    },
+    {
+      "block": 6,
+      "label": "west-reverse",
+      "direction": "WEST",
+      "setup": {
+        "SWL23LTK": 2
+      },
+      "blockers": {
+        "TLV24": "@RIGHT",
+        "BK3": 1,
+        "BK4": 1,
+        "BK6": 1
+      }
+    },
+    {
+      "block": 7,
+      "label": "east",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV8": "@LEFT",
+        "BK7": 1
+      }
+    },
+    {
+      "block": 7,
+      "label": "west-normal",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV8": "@RIGHT",
+        "BK7": 1
+      }
+    },
+    {
+      "block": 7,
+      "label": "west-reverse",
+      "direction": "WEST",
+      "setup": {
+        "SWL9LTK": 2
+      },
+      "blockers": {
+        "TLV10": "@RIGHT",
+        "BK7": 1,
+        "BK8": 1
+      }
+    },
+    {
+      "block": 8,
+      "label": "east-normal",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV10": "@LEFT",
+        "BK8": 1
+      }
+    },
+    {
+      "block": 8,
+      "label": "east-reverse",
+      "direction": "EAST",
+      "setup": {
+        "SWL9LTK": 2
+      },
+      "blockers": {
+        "TLV8": "@LEFT",
+        "BK7": 1,
+        "BK8": 1
+      }
+    },
+    {
+      "block": 8,
+      "label": "west-normal",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV10": "@RIGHT",
+        "BK8": 1
+      }
+    },
+    {
+      "block": 8,
+      "label": "west-reverse",
+      "direction": "WEST",
+      "setup": {
+        "SWL11LTK": 2
+      },
+      "blockers": {
+        "TLV12": "@RIGHT",
+        "BK8": 1
+      }
+    },
+    {
+      "block": 9,
+      "label": "east",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "TLV4": "@LEFT",
+        "BK9": 1
+      }
+    },
+    {
+      "block": 9,
+      "label": "west",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV4": "@RIGHT",
+        "BK9": 1
+      }
+    },
+    {
+      "block": 10,
+      "label": "east",
+      "direction": "EAST",
+      "setup": {},
+      "blockers": {
+        "BK10": 1
+      }
+    },
+    {
+      "block": 10,
+      "label": "west",
+      "direction": "WEST",
+      "setup": {},
+      "blockers": {
+        "TLV8": "@RIGHT",
+        "BK7": 1,
+        "BK10": 1,
+        "SWL15LTK": 2
+      }
+    }
+  ],
+  "id_edges": [
+    [
+      1,
+      7,
+      1,
+      "EAST",
+      {}
+    ],
+    [
+      1,
+      3,
+      1,
+      "WEST",
+      {}
+    ],
+    [
+      2,
+      8,
+      2,
+      "EAST",
+      {}
+    ],
+    [
+      2,
+      4,
+      2,
+      "WEST",
+      {}
+    ],
+    [
+      3,
+      1,
+      3,
+      "EAST",
+      {}
+    ],
+    [
+      3,
+      5,
+      3,
+      "WEST",
+      {}
+    ],
+    [
+      3,
+      4,
+      3,
+      "WEST",
+      {
+        "SWL23LTK": 2
+      }
+    ],
+    [
+      4,
+      2,
+      4,
+      "EAST",
+      {}
+    ],
+    [
+      4,
+      3,
+      4,
+      "EAST",
+      {
+        "SWL23LTK": 2
+      }
+    ],
+    [
+      4,
+      6,
+      4,
+      "WEST",
+      {}
+    ],
+    [
+      4,
+      12,
+      4,
+      "WEST",
+      {
+        "SWL25LTK": 2
+      }
+    ],
+    [
+      5,
+      3,
+      5,
+      "EAST",
+      {}
+    ],
+    [
+      5,
+      7,
+      5,
+      "WEST",
+      {}
+    ],
+    [
+      6,
+      4,
+      6,
+      "EAST",
+      {}
+    ],
+    [
+      6,
+      8,
+      6,
+      "WEST",
+      {}
+    ],
+    [
+      7,
+      5,
+      7,
+      "EAST",
+      {}
+    ],
+    [
+      7,
+      8,
+      7,
+      "EAST",
+      {
+        "SWL9LTK": 2
+      }
+    ],
+    [
+      7,
+      9,
+      7,
+      "EAST",
+      {
+        "SWL7LTK": 2
+      }
+    ],
+    [
+      7,
+      1,
+      7,
+      "WEST",
+      {}
+    ],
+    [
+      7,
+      10,
+      7,
+      "WEST",
+      {
+        "SWL15LTK": 2
+      }
+    ],
+    [
+      8,
+      6,
+      8,
+      "EAST",
+      {}
+    ],
+    [
+      8,
+      11,
+      8,
+      "EAST",
+      {
+        "SWL11LTK": 2
+      }
+    ],
+    [
+      8,
+      2,
+      8,
+      "WEST",
+      {}
+    ],
+    [
+      8,
+      7,
+      8,
+      "WEST",
+      {
+        "SWL9LTK": 2
+      }
+    ],
+    [
+      9,
+      14,
+      9,
+      "EAST",
+      {}
+    ],
+    [
+      9,
+      13,
+      9,
+      "EAST",
+      {
+        "SWL3LTK": 2
+      }
+    ],
+    [
+      9,
+      7,
+      9,
+      "WEST",
+      {}
+    ],
+    [
+      10,
+      7,
+      10,
+      "EAST",
+      {}
+    ],
+    [
+      11,
+      8,
+      8,
+      "WEST",
+      {
+        "SWL11LTK": 2
+      }
+    ],
+    [
+      12,
+      4,
+      4,
+      "EAST",
+      {
+        "SWL25LTK": 2
+      }
+    ],
+    [
+      13,
+      9,
+      9,
+      "WEST",
+      {
+        "SWL3LTK": 2
+      }
+    ],
+    [
+      14,
+      9,
+      9,
+      "WEST",
+      {}
+    ]
+  ]
+}

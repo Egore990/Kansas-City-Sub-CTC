@@ -24,6 +24,8 @@ Prepare a concrete build/test proposal identifying toolchain, isolated host/VM, 
 
 The [Phase 2 proposal](PHASE_2_BUILD_SIMULATION_PLAN.md) now defines the preparation packages and scenario matrix. Select the exact host/tool versions and commands for review before approval; none has been installed, built or run as part of this update. Keep recovered2018 source and dependencies distinct until their contents/provenance are assessed. Source modifications and automatic retargeting are outside the initial experiment.
 
+An owner-requested [automated component-test proposal](AUTOMATED_SIMULATION_TESTS.md) is now also prepared, with711 authored cases and separate memory-only host files. This offers a narrower initial compatibility experiment without the actual GUI, serial backend or PowerPacks. Its proposed compiler/runtime and commands are specified for approval; no compilation or CTC execution has occurred. It does not replace later original-application recovery or demonstrate physical/serial correctness.
+
 With all control adapters physically disconnected and VM passthrough absent, attempt the original build without automatic upgrades. Record compiler warnings/errors and resource/dependency versions. Resolve build blockers only in a separately approved copy with a small change record; preserve original code. Start only TestCMRI mode and validate four node forms, initialization, panel operation, representative routes, conflicts, cancellation and yard acceptance.
 
 **Exit evidence:** reproducible isolated build recipe, dependency provenance/hashes, screenshot/state/output records and observed results against [simulation scenarios](SIMULATION_CAPABILITIES.md). Failures are findings; a running UI alone is not acceptance.

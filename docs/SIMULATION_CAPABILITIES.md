@@ -4,6 +4,8 @@ Baseline: [overview](SYSTEM_OVERVIEW.md). **The source supports exercising the a
 
 The owner-requested next step is preparation, not execution. See the [unapproved Phase 2 plan](PHASE_2_BUILD_SIMULATION_PLAN.md) for isolated-environment prerequisites, build/launch approval gates, characterization scenarios and evidence requirements. Reported2018 simulator files remain unavailable and unverified; do not assume their behavior matches this source. Serial failure recovery cannot be certified with the existing checkbox backend.
 
+The owner has since requested automated tests based on the operating guides. A separate [component test host/catalog](AUTOMATED_SIMULATION_TESTS.md) is now prepared: 711 cases against the original control module with memory transport and UI stand-ins. It avoids checkbox automation, real serial code and PowerPacks, but does not exercise the actual rendered panel or serial driver. No compilation/test execution has occurred; the proposed first experiment is pending approval.
+
 ## How it works
 
 `MainPanel.RunWithCMRISimulatorToolStripMenuItem_Click` (`MainPanel.vb:39–45`) selects `New TestCMRI`, calls the normal `InitializeRailroad` and control loop and sets a 10 ms timer. The live menu instead selects `New CMRI` with a100 ms timer. Both use `InterfaceCMRI` (`ICMRI.vb:1–6`).

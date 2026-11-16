@@ -1,6 +1,8 @@
 # Proposed Phase 2 — controlled build and simulation
 
-**Status: proposal only; not approved or started.** This document does not authorize software modifications, compilation experiments, installations, application execution or hardware testing. The current work is documentation and static review. See [backup discovery](HISTORICAL_BACKUPS.md), [startup findings](STARTUP_INITIALIZATION.md) and [roadmap](RESTORATION_ROADMAP.md).
+**Status: original-application build/execution proposal remains unapproved and unexecuted.** This document does not authorize original-software modifications, compilation experiments, installations, application execution or hardware testing. Separate test assets have subsequently been prepared under the owner's automation request, as explained below. See [backup discovery](HISTORICAL_BACKUPS.md), [startup findings](STARTUP_INITIALIZATION.md) and [roadmap](RESTORATION_ROADMAP.md).
+
+**Later test-preparation request:** separate automated cases and a memory-only component host have now been authored at the owner's request; see [automated test proposal](AUTOMATED_SIMULATION_TESTS.md). No compiler or CTC test has been run. That proposal offers a narrower first experiment using the existing installed CLR4 compiler/runtime, excluding the real GUI/serial backend and PowerPacks. It needs its own approval before compilation/execution and does not constitute approval of the full original-project experiment below.
 
 ## Objective and boundaries
 
@@ -72,7 +74,7 @@ Launch only the newly built approved copy inside the isolated environment, selec
 | Maintenance | Restricted24R/26R overrides, bypass while SignalTest visible, panel-wide lamp test and simulated failure dialog limits |
 | Lifecycle | Pause/Resume retention and repeated Run state; Resume-before-initialization and visible-SignalTest startup only as explicitly approved fault scenarios |
 
-For each case capture preconditions, actions, source-predicted result, independently expected operating restriction, observed result and evidence. Label discrepancies and unsafe inherited behavior explicitly. Matching existing outputs does not prove a route safe or a point physically aligned. No code edits or automated harness are part of this package by default.
+For each case capture preconditions, actions, source-predicted result, independently expected operating restriction, observed result and evidence. Label discrepancies and unsafe inherited behavior explicitly. Matching existing outputs does not prove a route safe or a point physically aligned. Original code edits remain excluded. The subsequently requested automated component harness is prepared separately; its narrower build/execution must be reviewed and approved rather than implicitly added to this original GUI experiment.
 
 ### Package 5 — results review and baseline decision
 
