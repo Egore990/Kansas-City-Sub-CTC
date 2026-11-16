@@ -28,6 +28,8 @@ Supplement: [Startup initialization and turnout position tracking](STARTUP_INITI
 
 Reading guide: [Signal logic in step-by-step English](SIGNAL_LOGIC_PLAIN_ENGLISH.md) explains every implemented wayside signal, its stop/clear conditions, displayed aspects, yard permissions and cancellation behavior, with source references and explicit limits.
 
+Companion guides: [Points and locks in step-by-step English](POINT_LOGIC_PLAIN_ENGLISH.md) covers every configured motor/gate channel and controlled lock. [Blocks in step-by-step English](BLOCK_LOGIC_PLAIN_ENGLISH.md) covers detected blocks1–10, active undetected boundary records11–14 and legacy slot15, including direction assignment/release, occupancy, train-ID transfer and screen block coloring. Together these describe the inspected source, not an exhaustive survey of unverified physical wiring or a tested railway rulebook.
+
 Project update: [Historical backups and comparison plan](HISTORICAL_BACKUPS.md) records the unavailable2018 candidates and their evidence status. [Proposed Phase 2 build and simulation plan](PHASE_2_BUILD_SIMULATION_PLAN.md) defines prerequisites, approval gates and future evidence; it has not been executed.
 
 ## Evidence convention and scope

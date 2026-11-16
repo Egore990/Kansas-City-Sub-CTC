@@ -4,6 +4,8 @@ Written 17 November 2026 from the inspected GitHub source, commit `0a561b3f8de45
 
 The reported 2018 backups remain unavailable. Their signal rules, startup command and deployed behavior may differ. This document covers all 15 wayside signal variables in the audited source. It describes active code; commented-out alternatives are not operating rules.
 
+Companion reading: [point and lock rules](POINT_LOGIC_PLAIN_ENGLISH.md) and [block-by-block rules](BLOCK_LOGIC_PLAIN_ENGLISH.md) explain the motor/request guards, controlled locks, occupancy inputs, direction-memory release and train-ID movement behind these signal decisions.
+
 ## How to read these instructions
 
 - **Left and right** mean the dispatcher's signal-lever requests and the signal names in the code. They do not mean a train turns left or right at the points. The program calculates L signals in `RouteCheckEast` and R signals in `RouteCheckWest`; physical orientation still needs confirmation against the layout.

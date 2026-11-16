@@ -2,6 +2,8 @@
 
 This is a **software address map**, not a certified wiring schedule. Baseline: [overview](SYSTEM_OVERVIEW.md). The executable statements in `CTCLogic.vb:650–766,2842–3107` are authoritative for this snapshot. Simulator labels are secondary evidence and sometimes disagree. Unknown terminals, cable cores, driver polarity, voltage ratings and physical board addresses must be surveyed, not inferred.
 
+For operational explanations of these addresses, see the [point and lock guide](POINT_LOGIC_PLAIN_ENGLISH.md) and [block guide](BLOCK_LOGIC_PLAIN_ENGLISH.md). Neither adds assignments for unidentified physical manual controls or undeclared detector sections.
+
 Authoritative owner clarification (16 November 2026): some points have manual control, while others have software interlocking. Their overlap must be established, not assumed. The local turnout 25 switch and controlled-lock paths below are source-confirmed examples; this table is not an exhaustive inventory of physical manual controls. See the [point-by-point findings](CTC_INTERLOCKING.md#point-by-point-source-findings) for control, monitoring and restrictions. Record each manual switch, affected point, software permission/lock and feedback path during the wiring survey. EasyDCC is standalone with detector occupancy supplied to CTC; no DCC command integration is planned. Turntable control remains a manual layout-side switch. Later owner-installed day/night lighting is excluded from initial software restoration. No additional C/MRI assignments or automation are inferred.
 
 ## Conventions and nodes

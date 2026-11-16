@@ -4,6 +4,8 @@ Baseline: [overview](SYSTEM_OVERVIEW.md). Confirmed behavior below is static sou
 
 For a non-programmer explanation, see [Signal logic in step-by-step English](SIGNAL_LOGIC_PLAIN_ENGLISH.md). It expands the route tables into numbered checks for all15 wayside signal variables, explaining the code-button process, remembered directions, time release and yardmaster permissions. This technical document retains the compact predicates and implementation detail.
 
+The [point/lock guide](POINT_LOGIC_PLAIN_ENGLISH.md) expands individual acceptance/movement and release rules. The [block guide](BLOCK_LOGIC_PLAIN_ENGLISH.md) explains all detected and boundary records, each traffic memory's set/release rules, ID transfers, detector gating and block line drawings, preserving differences between immediate and delayed point indications.
+
 ## Ordered control cycle
 
 `DoOneControlCycle` (`210–274`) increments the cycle-based flash counter, reads all nodes, processes dispatcher controls, sets traffic sticks, commands turnout state, handles electric locks, computes routes east then west, applies time locking, clears traffic sticks, schedules indication codes, updates office/graphical indications, advances road-light timing, decrements timers, applies simulated signal failure and writes all nodes.
