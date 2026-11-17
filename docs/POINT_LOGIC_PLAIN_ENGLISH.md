@@ -1,6 +1,6 @@
 # Point and lock logic in step-by-step English
 
-Written 17 November 2026 from GitHub baseline `0a561b3f8de459a787795a16da4c987868d4ae79`. This explains the program; it is not a tested operating instruction. No software or hardware was operated or changed. The unavailable 2018 backups may differ.
+Written 17 November 2026 from GitHub baseline `0a561b3f8de459a787795a16da4c987868d4ae79`. This explains the program; it is not a tested operating instruction. No software or hardware was operated or changed. The [backup comparison](BACKUP_COMPARISON.md) confirms unchanged point/interlocking algorithms, feedback use and movement timers; recovered communications and failed-read handling differ. References below retain baseline line numbers.
 
 Read alongside [signal rules](SIGNAL_LOGIC_PLAIN_ENGLISH.md), [block rules](BLOCK_LOGIC_PLAIN_ENGLISH.md) and the [I/O map](HARDWARE_IO_MAPPING.md). This guide covers every configured powered-point/gate channel and controlled lock: 1, 3, 7, 9, 11, 15, 17, 19, 23 and 25. It cannot invent a complete list of physical manual points not represented in source.
 

@@ -2,6 +2,8 @@
 
 Baseline and confidence conventions: [system overview](SYSTEM_OVERVIEW.md). This document describes the implementation, including defects, rather than assuming every comment is accurate.
 
+**Recovered-version supplement, 17 November2026:** [BACKUP_COMPARISON.md](BACKUP_COMPARISON.md) records identical uncommitted edits in both archived projects: a module-owned port on COM2/19,200, a50 ms post-poll wait and success-guarded input decoding. The following COM4/9,600 configuration and failure-path descriptions remain specific to the2016 baseline. Node/bit mappings and packet framing are unchanged; neither version implements demonstrated stop-on-disconnect behavior. Saved JMRI settings use COM2/9,600, requiring physical-setting verification rather than an assumed baud rate.
+
 ## Transport and configuration
 
 `CMRI.vb` imports `System.IO.Ports` and implements `InterfaceCMRI` (`ICMRI.vb:1–6`). There is no external C/MRI communications DLL or active MSComm COM reference. Many comments still say “MSComm”; actual calls use the framework `SerialPort` owned by `MainPanel`.

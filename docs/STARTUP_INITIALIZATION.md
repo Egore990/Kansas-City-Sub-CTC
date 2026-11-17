@@ -2,7 +2,7 @@
 
 Supplement to the Phase 1 audit, 16 November 2026. Baseline: commit `0a561b3f8de459a787795a16da4c987868d4ae79`; see [overview](SYSTEM_OVERVIEW.md). Static investigation only. No application execution, hardware communication or initialization/interlocking changes.
 
-**Backup update:** the owner reports2018 source and compiled application candidates that Codex has not yet received. The command names, defaults, feedback use and timing conclusions here apply to the inspected2016 GitHub baseline, not automatically to those backups or the last operational installation. The [future comparison](HISTORICAL_BACKUPS.md) must explicitly check startup routines and any changed Start Layout action. The [Phase 2 proposal](PHASE_2_BUILD_SIMULATION_PLAN.md) requires characterization before any approved behavior change.
+**Backup comparison, 17 November 2026:** the [recovered source](BACKUP_COMPARISON.md) preserves the same startup handler, initialization order/defaults, feedback use and turnout timers. `InitializeNodes` now constructs a module-owned serial object and selects COM2/19,200; input decoding now checks returned success. These changes do not add turnout movement proof, startup settling waits or an initialization-complete gate. The literal Start Layout command remains unidentified. References below retain their2016 baseline line numbers. The [Phase 2 proposal](PHASE_2_BUILD_SIMULATION_PLAN.md) requires characterization before any approved behavior change.
 
 ## Identifying “Start Layout”
 

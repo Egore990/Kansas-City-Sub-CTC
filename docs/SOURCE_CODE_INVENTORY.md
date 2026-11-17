@@ -2,7 +2,7 @@
 
 Baseline: [overview](SYSTEM_OVERVIEW.md). Paths below are relative to the repository root. The audited baseline contains **104 tracked files**, excluding `.git` and the subsequently added audit documentation and separate test assets. The file-by-file appendix lists every baseline file; generated files and assets are not omitted simply because they contain no control logic.
 
-**Pending archive comparison:** the owner reports Windows7 PC backups containing source dated2016/2018, an approximately235 KB application dated23 April2018, PowerPacks material and local `.git` history. These are not included in this inventory and have not been inspected by Codex. No timestamp, binary/source match, dependency version or unpublished commit is verified. See [backup register and comparison procedure](HISTORICAL_BACKUPS.md); all completeness findings below apply only to the inspected GitHub baseline.
+**Archive comparison completed17 November2026:** [BACKUP_COMPARISON.md](BACKUP_COMPARISON.md) identifies two project trees with identical source, two uncommitted communications edits against GitHub, the same47-commit history and a distinct2018 executable in the more complete nested copy. PowerPacks12 is present and matches the historical Git DLL. The local analysis CSVs compare all104 baseline paths. This inventory retains the original GitHub findings and line references; recovered-build identity and successful compilation remain unproven.
 
 ## Build system and dependencies
 

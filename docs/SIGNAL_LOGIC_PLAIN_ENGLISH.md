@@ -2,7 +2,7 @@
 
 Written 17 November 2026 from the inspected GitHub source, commit `0a561b3f8de459a787795a16da4c987868d4ae79`. Main source: `CTCLogic.vb`. This is a description of what the program calculates, not a tested operating rulebook or permission to run trains. No software was modified or executed to prepare it.
 
-The reported 2018 backups remain unavailable. Their signal rules, startup command and deployed behavior may differ. This document covers all 15 wayside signal variables in the audited source. It describes active code; commented-out alternatives are not operating rules.
+The [17 November backup comparison](BACKUP_COMPARISON.md) confirms unchanged signal/route algorithms in both recovered source trees. Serial setup and failed-input behavior differ; the exact deployed source/build pairing remains unproven. This document retains baseline line references and covers all15 wayside signal variables. It describes active code; commented-out alternatives are not operating rules.
 
 Companion reading: [point and lock rules](POINT_LOGIC_PLAIN_ENGLISH.md) and [block-by-block rules](BLOCK_LOGIC_PLAIN_ENGLISH.md) explain the motor/request guards, controlled locks, occupancy inputs, direction-memory release and train-ID movement behind these signal decisions.
 

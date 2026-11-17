@@ -2,7 +2,7 @@
 
 This is a proposal for work **after Phase1 review**, not implementation authorization. Phase1 has changed no existing source or configuration and has not compiled, run, deployed or connected to hardware. Baseline: [overview](SYSTEM_OVERVIEW.md).
 
-**Current direction:** preserve and behaviorally verify the original system before modernization. The existing GitHub source is the immediate reference while the reported2018 backups are unavailable. [Phase 2 software planning](PHASE_2_BUILD_SIMULATION_PLAN.md) expands Stage1 below; the stage numbers are restoration milestones, not permission to start subsequent phases. No Phase 2 implementation, build or execution is approved.
+**Current direction:** preserve and behaviorally verify the original system before modernization. The [17 November backup comparison](BACKUP_COMPARISON.md) identifies the nested `KCSubCTC/Kansas-City-Sub-CTC` copy as the strongest historical candidate, pending review; GitHub remains the immutable audited reference. [Phase 2 software planning](PHASE_2_BUILD_SIMULATION_PLAN.md) expands Stage1 below; the stage numbers are restoration milestones, not permission to start subsequent phases. No Phase 2 implementation, build or execution is approved.
 
 ## Stage0 — review and preserve
 
@@ -12,9 +12,9 @@ Review the ten requested documents and the startup supplement with the owner and
 
 ## Stage0B — preserve and compare the reported2018 backups when available
 
-The owner has located approximately5 GB of original Windows7 PC backup material, with reported `CTC`, `Kansas-City-Sub-CTC` and `KCSubCTC` folders. Reported evidence includes source dated22 April2018, application artifacts dated23 April2018, PowerPacks, local `.git` and historical development/installed-software folders. Codex has not received or inspected these files; see [evidence register and comparison procedure](HISTORICAL_BACKUPS.md).
+The original-PC material is now accessible in OneDrive. A [read-only comparison](BACKUP_COMPARISON.md) inventories 33,730 files and hashes both CTC project trees. The nested copy includes a distinct2018 EXE and PowerPacks12 DLL; both projects have identical source and the same47-commit GitHub history, with two unstaged communications edits. Route/aspect algorithms and I/O mappings are unchanged. The owner confirms this backup came from the last working system before moisture damaged the PC power supply. Exact deployed source/build identity remains unproven; see [evidence register](HISTORICAL_BACKUPS.md).
 
-Once complete local copies are available, preserve them unchanged and create read-only path/hash manifests. Compare source, project/resources/configuration, binaries/dependencies, Git refs/ancestry and uncommitted differences. Prioritize C/MRI mappings, route/turnout logic, Start Layout/initialization, timers, maintenance and simulation changes. Check byte identity and source-to-binary evidence rather than ranking by date. JMRI installations/backups are evidence to inventory, not proof of operational integration.
+Review the existing manifests/comparison and preserve an independent copy outside live synchronization. Confirm the old launch path, source/build pairing and actual board/adapter baud settings: the recovered VB source uses COM2/19,200, whereas the saved JMRI C/MRI profile uses COM2/9,600. JMRI sensor/turnout configuration exists, but does not establish operational integration. Keep variants separate and resolve these uncertainties before any later authorized hardware connection.
 
 **Exit evidence:** file/function comparison report, history divergence record, candidate completeness/build/dependency assessment, and recommendation with uncertainties. No merge, checkout into an original backup, historical EXE launch or code replacement. Review and approval are required before adopting historical code. This comparison may occur before or after an approved GitHub-only simulator baseline; lack of archive access does not authorize switching candidates or prevent preparation of Stage1. Operational baseline selection remains provisional until comparison is reviewed.
 

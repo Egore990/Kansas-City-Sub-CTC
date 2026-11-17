@@ -2,6 +2,10 @@
 
 Status: test assets prepared for review; **not compiled or executed**. The owner's request to turn the guides into automated cases authorizes preparing a separate harness/catalog. It does not waive the earlier requirement to explain requirements and obtain approval before compilation experiments or execution. No original CTC software is edited, upgraded or rewritten.
 
+**Recovered-source warning,17 November2026:** this proposal and its711 cases remain pinned to the GitHub2016 source. [Backup comparison](BACKUP_COMPARISON.md) found unchanged route/aspect algorithms but changed input-error behavior and a new serial-object constructor. The current null-port memory host is not directly compatible with that initialization. Do not replace sources, bypass hashes or silently reuse error-path expectations. A candidate-specific proposal must be reviewed before any approved adaptation/build/run; no such adaptation was made here.
+
+The guide introductions now include the comparison findings, so their raw hashes differ from the originally pinned guide hashes. The manifest and harness were deliberately left unchanged during this documentation-only comparison. The existing gate will therefore also block a GitHub-only build until the guide-only revisions are reviewed and their hashes explicitly refreshed. Original source pins and scenario assertions remain unchanged; this is not an executed test failure.
+
 ## Approach
 
 Compile the original `CTCLogic.vb` and `ICMRI.vb` into a separate component-test executable with memory-only replacements for logging, diagram refresh, SignalTest visibility and C/MRI transport. Exclude the actual serial driver and GUI entirely. Test the real routines, not a translated implementation of their algorithms. See [test-host files and proposed commands](../audit-tests/README.md).

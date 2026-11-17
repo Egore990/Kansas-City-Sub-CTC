@@ -1,6 +1,6 @@
 # Block logic in step-by-step English
 
-Written 17 November 2026 from GitHub baseline `0a561b3f8de459a787795a16da4c987868d4ae79`. Static source explanation only: no software/hardware operation, code change or verified running result. The unavailable 2018 source may differ. Read with [signal rules](SIGNAL_LOGIC_PLAIN_ENGLISH.md), [point rules](POINT_LOGIC_PLAIN_ENGLISH.md) and [I/O mapping](HARDWARE_IO_MAPPING.md).
+Written 17 November 2026 from GitHub baseline `0a561b3f8de459a787795a16da4c987868d4ae79`. Static source explanation only: no software/hardware operation, code change or verified running result. The [backup comparison](BACKUP_COMPARISON.md) confirms unchanged traffic-stick/train-ID/block algorithms and bit assignments; recovered source skips decoding a node after a reported failed read, retaining previous decoded states. References and baseline error-path explanations below remain version-specific. Read with [signal rules](SIGNAL_LOGIC_PLAIN_ENGLISH.md), [point rules](POINT_LOGIC_PLAIN_ENGLISH.md) and [I/O mapping](HARDWARE_IO_MAPPING.md).
 
 This guide covers all ten detected blocks, the four active undetected boundary records 11–14, and unused/legacy slot 15. It explains occupancy, direction assignment/release, train-ID transfer and block presentation. It is not proof of physical detector boundaries, track authority or safe running.
 

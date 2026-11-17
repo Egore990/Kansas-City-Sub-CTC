@@ -8,7 +8,7 @@ The owner's authoritative clarification on 16 November 2026 supersedes earlier a
 
 ## Highest priority: preserve and identify the real baseline
 
-The owner has now located substantial original-PC backups, but they are not yet available to Codex. The immediate missing inputs are complete local paths/provenance and access to the actual files, including hidden `.git`; the existence of reported folders must not be confused with completed recovery or comparison. The [backup register](HISTORICAL_BACKUPS.md) records approximate sizes,2018 observations and read-only comparison requirements. The [Phase 2 proposal](PHASE_2_BUILD_SIMULATION_PLAN.md#information-needed-from-the-owner-before-gate-a) lists environment/operating inputs needed before any approved build or execution.
+The original-PC files are now accessible and both CTC projects have been hash-compared, including `.git`; see [BACKUP_COMPARISON.md](BACKUP_COMPARISON.md). The nested copy is most complete and supplies a distinct2018 EXE, corresponding-identity PDB and PowerPacks12. The owner confirms last-working provenance for the backup. Remaining needs are an independent archival copy, actual deployed launch path, exact source/build relationship and physical baud settings (VB19,200 versus saved JMRI9,600). The [Phase 2 proposal](PHASE_2_BUILD_SIMULATION_PLAN.md#information-needed-from-the-owner-before-gate-a) retains approval/environment requirements before any build or execution.
 
 | Needed evidence | Why it matters | Possible source |
 |---|---|---|
@@ -58,7 +58,7 @@ All current Compile/EmbeddedResource paths and central file-backed resource refe
 
 Git history was reviewed for current architecture, relevant changes, deletion provenance and snapshot chronology. It does not include a complete pre2016 development archive. Parent-fork divergence, other branches not advertised by this remote, original removable media and any uncommitted last-working changes remain outside the audit. Additional archives should be compared read-only and recorded by hash before selecting any baseline.
 
-Reported local `.git`, `.vs`, `obj` and `bin/Debug` directories may supply missing ancestry, source/binary relationships and development-environment evidence. Their contents/completeness are unverified. JMRI folders/installers4.4 and4.12 do not prove operational integration. Later timestamps do not resolve which revision was actually deployed.
+Archived Git history is now verified as the same47 original commits, without staged changes or recovered later commits; the two source edits are unstaged. EXE/PDB metadata supports a build-path/identity relationship but does not prove source-byte identity. Saved JMRI profiles contain C/MRI nodes0–3 and limited sensor/turnout configuration, which does not prove complete operational integration. Identical source hashes with differing2016/2018 dates confirm that timestamps alone cannot select the operational baseline.
 
 ## Acceptance evidence still absent
 
